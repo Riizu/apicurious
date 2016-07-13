@@ -1,6 +1,5 @@
 require 'support/integration_spec_helper'
 require 'capybara/rspec'
-require 'omniauth'
 require 'simplecov'
 
 SimpleCov.start do
@@ -27,5 +26,3 @@ RSpec.configure do |config|
 
   config.include IntegrationSpecHelper, :type => :request
 end
-
-Capybara.default_host = 'http://example.org'
