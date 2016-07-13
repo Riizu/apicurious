@@ -1,3 +1,5 @@
+require 'support/integration_spec_helper'
+require 'capybara/rspec'
 require 'simplecov'
 
 SimpleCov.start do
@@ -21,4 +23,6 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
+
+  config.include IntegrationSpecHelper, :type => :request
 end
