@@ -1,0 +1,7 @@
+<% @summoners.each do |summoner| %>
+  <div class="summoner-<%= summoner.id %>">
+  <%= image_tag("http://ddragon.leagueoflegends.com/cdn/6.14.2/img/profileicon/#{summoner.profileIconId}.png", id: "summoner-avatar") %>
+  Summoner: <%= summoner.name %>
+  Level: <%= summoner.summonerLevel %>
+  </div>
+<% end %>

@@ -1,6 +1,13 @@
 <% if current_user %>
   Welcome, <%= current_user.name %>.
   <%= link_to "Logout", logout_path %>
+
+  <%= form_tag(summaries_path, method: "get") do %>
+    <%= label_tag(:summoner_names, "Summoner Names:") %>
+    <%= text_field_tag(:summoner_names) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+
 <% else %>
   <%= link_to "Login", twitter_login_path %>
 <% end %>
